@@ -90,15 +90,15 @@ ggplot(data = StepsByIntervalWeekday, aes(x = interval, y = total)) +
   geom_line() +
   xlab("Interval") +
   ylab("Average Daily Steps Taken each interval") +
-  labs(title = "Average Number of Steps Taken in each interval of a weekday")
+  labs(title = "Average Number of Steps Taken in each interval of a weekday/weekend")
 
-#Time series plot of the average number of steps taken in each interval of a weekday
-StepsByIntervalWeekend <- activity1 %>% 
-  filter(weekday == "weekend") %>% 
-  group_by(interval) %>% 
-  summarise(total = sum(steps, na.rm = TRUE))
-ggplot(data = StepsByIntervalWeekend, aes(x = interval, y = total)) +
-  geom_line() +
-  xlab("Interval") +
-  ylab("Average Daily Steps Taken each interval") +
-  labs(title = "Average Number of Steps Taken in each interval of a weekend")
+# #Time series plot of the average number of steps taken in each interval of a weekday
+# StepsByIntervalWeekend <- activity1 %>% 
+#   filter(weekday == "weekend") %>% 
+#   group_by(interval) %>% 
+#   summarise(total = sum(steps, na.rm = TRUE))
+# ggplot(data = StepsByIntervalWeekend, aes(x = interval, y = total)) +
+#   geom_line() +
+#   xlab("Interval") +
+#   ylab("Average Daily Steps Taken each interval") +
+#   labs(title = "Average Number of Steps Taken in each interval of a weekend")
